@@ -34,7 +34,7 @@ describe('Testes da Funcionalidade Usuários', () => {
   it('Deve validar um usuário com email inválido', () => {
     let nomeFake = faker.name.fullName()
     let senhaFake = faker.internet.password()
-    cy.cadastrarUsuario(nomeFake, "jack@bauer.com", senhaFake, "true").should((response) => {
+    cy.cadastrarUsuario(nomeFake, "urquizagabriel21@ebac.com", senhaFake, "true").should((response) => {
       expect(response.status).to.equal(400)
       expect(response.body.message).equal('Este email já está sendo usado')
     })
